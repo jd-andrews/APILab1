@@ -1,0 +1,43 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  cursor: url(super.ani);
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  width: fit-content;
+}
+
+#feed {
+  width: 10em;
+}
+
+.post_title {
+  color: rgb(51, 255, 0);
+  width: 10em;
+}
+
+.link {
+  color: red;
+  text-decoration: none;
+  width: 10em;
+}
+
+.author {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.tenor-gif-embed {
+  position: fixed !important;
+  right: 10px;
+  bottom: 10px;
+  width: 100px;
+}
