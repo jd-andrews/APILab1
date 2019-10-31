@@ -3,36 +3,47 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  cursor: url(super.ani);
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=120891);
+  font-family: "Courier New", Courier, monospace;
 }
 
 .post {
   display: flex;
   flex-direction: column;
+  border: 2px solid grey;
+  margin-top: 5px;
+  /* padding: 8px; */
+  padding-top: 0;
 }
 
 .thumbnail {
   width: fit-content;
+  margin: 8px;
 }
 
 #feed {
-  width: 10em;
+  width: 300px;
 }
 
 .post_title {
   color: rgb(51, 255, 0);
-  width: 10em;
+  width: fit-content;
+  font-weight: bold;
+  margin: 8px;
 }
 
 .link {
   color: red;
   text-decoration: none;
-  width: 10em;
+  width: fit-content;
+  margin: 8px;
 }
 
 .author {
   text-decoration: none;
   width: fit-content;
+  color: yellow;
+  margin: 8px;
 }
 
 .tenor-gif-embed {
@@ -40,4 +51,35 @@ body {
   right: 10px;
   bottom: 10px;
   width: 100px;
+}
+
+h1 {
+  color: turquoise;
+}
+
+a {
+  text-decoration: none;
+  color: ;
+}
+
+a:hover {
+}
+
+.header {
+  height: 15px;
+  background-color: grey;
+  margin: 0;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.minmaxclose {
+  background-color: silver;
+}
+
+.titleMMC {
+  font-size: 6pt;
+  background-color: silver;
 }

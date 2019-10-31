@@ -11,10 +11,25 @@ fetch("https://www.reddit.com/r/aww/.json")
     const feedEl = document.getElementById("feed");
 
     for (const post of data.data.children) {
+      // for (let post = 0, post < 10, post++){
       console.log(post.kind);
       /// new post div
       let newPost = document.createElement("div");
       newPost.classList.add("post");
+      ///random header div
+      let headerDiv = document.createElement("div");
+      headerDiv.classList.add("header");
+      let minMaxClose = document.createElement("div");
+      minMaxClose.classList.add("minmaxclose");
+      let minMaxTitle = document.createElement("div");
+      minMaxTitle.classList.add("titleMMC");
+      minMaxTitle.innerText = post.data.title;
+      let minMaxButton = document.createElement("img");
+      minMaxButton.classList.add("imgMMC");
+      minMaxClose.appendChild(minMaxTitle);
+      minMaxClose.appendChild(minMaxButton);
+      headerDiv.appendChild(minMaxClose);
+      newPost.appendChild(headerDiv);
       /// post title
       let postTitle = document.createElement("p");
       postTitle.classList.add("post_title");
@@ -33,7 +48,7 @@ fetch("https://www.reddit.com/r/aww/.json")
         `https://www.reddit.com${post.data.permalink}`
       );
       permaLink.setAttribute("target", "_blank");
-      permaLink.innerText = post.data.title;
+      permaLink.innerText = `> > > ${post.data.title} < < <`;
       newPost.appendChild(permaLink);
       /// Author
       const authorProfile = document.createElement("a");
