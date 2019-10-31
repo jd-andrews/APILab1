@@ -9,11 +9,12 @@ fetch("https://www.reddit.com/r/aww/.json")
     // document.querySelector("body").appendChild(feedEl);
 
     const feedEl = document.getElementById("feed");
-
+    // let post = 0
     for (const post of data.data.children) {
-      // for (let post = 0, post < 10, post++){
+      // for (let post = 0, post < 10; post++){
       console.log(post.kind);
       /// new post div
+
       let newPost = document.createElement("div");
       newPost.classList.add("post");
       ///random header div
@@ -24,8 +25,9 @@ fetch("https://www.reddit.com/r/aww/.json")
       let minMaxTitle = document.createElement("div");
       minMaxTitle.classList.add("titleMMC");
       minMaxTitle.innerText = post.data.title;
-      let minMaxButton = document.createElement("img");
+      let minMaxButton = document.createElement("p");
       minMaxButton.classList.add("imgMMC");
+      minMaxButton.innerText = "ooo";
       minMaxClose.appendChild(minMaxTitle);
       minMaxClose.appendChild(minMaxButton);
       headerDiv.appendChild(minMaxClose);
